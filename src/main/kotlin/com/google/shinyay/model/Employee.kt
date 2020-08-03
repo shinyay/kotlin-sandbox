@@ -1,4 +1,6 @@
 package com.google.shinyay.model
 
-class Employee {
-}
+data class Employee(val firstName: String,
+                    val lastName: String,
+                    val id: Int,
+                    val age: Int)
