@@ -16,4 +16,13 @@ class ScopeTest {
         Assert.assertEquals(Gender.MALE, employee.gender)
     }
 
+    @Test
+    fun testLetFunction() {
+        val employee: Employee = Employee("Shinya", "Yanagihara", 2)
+            .let {
+                it.age = 30
+                it.gender = Gender.MALE
+                it
+            }
+    }
 }
