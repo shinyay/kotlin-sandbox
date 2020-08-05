@@ -39,4 +39,17 @@ class ScopeTest {
         Assert.assertEquals(14, employee.age)
         Assert.assertEquals(Gender.FEMALE, employee.gender)
     }
+
+    @Test
+    fun testAlsoFunction() {
+        val employee: Employee = Employee("Toji", "Suzuhara", 4)
+            .also {
+                it.age = 14
+                it.gender = Gender.MALE
+            }
+            .also {
+                Assert.assertEquals(14, it.age)
+                Assert.assertEquals(Gender.MALE, it.gender)
+            }
+    }
 }
