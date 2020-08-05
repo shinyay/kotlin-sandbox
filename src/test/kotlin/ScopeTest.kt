@@ -7,22 +7,36 @@ class ScopeTest {
 
     @Test
     fun testApplyFunction() {
-        val employee: Employee = Employee("Shinya", lastName = "Yanagihara", id = 1)
+        val employee: Employee = Employee("Rei", lastName = "Ayanami", id = 1)
             .apply {
-                age = 40
-                gender = Gender.MALE
+                age = 14
+                gender = Gender.FEMALE
             }
-        Assert.assertEquals(40, employee.age)
-        Assert.assertEquals(Gender.MALE, employee.gender)
+        Assert.assertEquals(14, employee.age)
+        Assert.assertEquals(Gender.FEMALE, employee.gender)
     }
 
     @Test
     fun testLetFunction() {
-        val employee: Employee = Employee("Shinya", "Yanagihara", 2)
+        val employee: Employee = Employee("Shinji", "Ikari", 2)
             .let {
-                it.age = 30
+                it.age = 14
                 it.gender = Gender.MALE
                 it
             }
+        Assert.assertEquals(14, employee.age)
+        Assert.assertEquals(Gender.MALE, employee.gender)
+    }
+
+    @Test
+    fun testRunFunction() {
+        val employee: Employee = Employee("Asuka", "Soryu", 3)
+            .run {
+                age = 14
+                gender = Gender.FEMALE
+                this
+            }
+        Assert.assertEquals(14, employee.age)
+        Assert.assertEquals(Gender.FEMALE, employee.gender)
     }
 }
