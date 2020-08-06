@@ -35,6 +35,9 @@ val child = Child("Shinji", "Ikari", 2)
             }
 ```
 
+#### Run
+**Run** refers to the context object as a lambda receiver same as `apply` function.
+
 ## Demo
 
 ## Features
