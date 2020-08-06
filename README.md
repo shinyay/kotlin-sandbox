@@ -37,7 +37,16 @@ val child = Child("Shinji", "Ikari", 2)
 
 #### Run
 **Run** refers to the context object as a lambda receiver same as `apply` function.
+Unlike `apply`, `run` returns the lambda result instead of the context object.
 
+```kotlin
+val child = Child("Asuka", "Soryu", 3)
+            .run {
+                age = 14
+                gender = Gender.FEMALE
+                this
+            }
+```
 ## Demo
 
 ## Features
