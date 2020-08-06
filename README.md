@@ -9,6 +9,11 @@ I'll try various Kotlin syntax
 - `run`
 - `also`
 
+#### apply
+**Apply** refers to the context object as a lambda receiver – by keyword `this`, which you can omit the kyeword.
+
+
+
 ## Demo
 
 ## Features
