@@ -21,6 +21,10 @@ val child = Child("Rei", lastName = "Ayanami", id = 1)
             }
 ```
 
+#### let
+**Let** accesses the context object as a lambda argument.
+If the argument name is not specified, the object is accessed by the implicit default name `it`.
+
 ## Demo
 
 ## Features
