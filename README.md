@@ -47,6 +47,17 @@ val child = Child("Asuka", "Soryu", 3)
                 this
             }
 ```
+
+#### Also
+
+```kotlin
+val child = Child("Toji", "Suzuhara", 4)
+            .also {
+                it.age = 14
+                it.gender = Gender.MALE
+            }
+```
+
 ## Demo
 
 ## Features
