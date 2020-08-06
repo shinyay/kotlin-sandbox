@@ -11,8 +11,15 @@ I'll try various Kotlin syntax
 
 #### apply
 **Apply** refers to the context object as a lambda receiver – by keyword `this`, which you can omit the kyeword.
+This feature makes it ideal for changing value of object fields.
 
-
+```kotlin
+val child = Child("Rei", lastName = "Ayanami", id = 1)
+            .apply {
+                age = 14
+                gender = Gender.FEMALE
+            }
+```
 
 ## Demo
 
