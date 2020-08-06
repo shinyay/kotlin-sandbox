@@ -9,6 +9,11 @@ I'll try various Kotlin syntax
 - `run`
 - `also`
 
+|(Object References as...)|Return Self|Return Result(last statement)|
+|---|--------------|-------------|
+|receiver (this)|`apply`|`run`|
+|parameter (it)|`also`|`let`|
+
 #### apply
 **Apply** refers to the context object as a lambda receiver – by keyword `this`, which you can omit the kyeword.
 This feature makes it ideal for changing value of object fields.
